@@ -4,28 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokédex</title>
   </head>
   <body>
-
-      <header>
-        <h1>Pokédex</h1>
-      </header>
-<main>
-    <section>
-
-        <% pokedex.forEach((pokemon)=>{  %>
+    <header>
+      <h1>Pokédex</h1>
+    </header>
+    <main>
+      <section>
+        <% pokedex.forEach((pokemon)=>{ %>
         <div class="card">
-          <h2 class="name"> <%=pokemon.name%> </h2>
+          <h2 class="name"><%=pokemon.name%></h2>
           <img class="img" src="<%=pokemon.img%>" alt="" />
-           <h3 class="type">Type: <%=pokemon.type%></h3>  
+          <h3 class="type">Type: <%=pokemon.type%></h3>
         </div>
         <% }); %>
-
       </section>
-</main>
-    
-    <footer><h3>Projeto Desenvolvido por: Dener Batista</h3></footer>
+    </main>
+    <footer><h3>Projeto Desenvolvido por Dener Batista</h3></footer>
   </body>
 </html>
