@@ -1,0 +1,26 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Projeto MVC de uma Pokédex",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denerbatista/Pokedex.git"
+  },
+  "author": "Dener Batista",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denerbatista/Pokedex/issues"
+  },
+  "homepage": "https://github.com/denerbatista/Pokedex#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
