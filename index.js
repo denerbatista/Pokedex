@@ -6,7 +6,6 @@ const port=3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
-// app.use(express.urlencoded());
 app.use(express.urlencoded({extended: true})) // O corpo (body) da requisição
 app.use(express.json()) // converter para JSON
 
@@ -19,7 +18,7 @@ const pokedex =[
         img:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
         description:"There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
         height:"0.7 m",
-        Weight:"6.9 kg",
+        weight:"6.9 kg",
         category:"Seed",
         ability:"Overgrow"
 
@@ -32,7 +31,7 @@ const pokedex =[
         img:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
         description:"When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
         height:"1 m",
-        Weight:"13 kg",
+        weight:"13 kg",
         category:"Seed",
         ability:"Overgrow"
     },
@@ -44,13 +43,13 @@ const pokedex =[
         img:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
         description:"Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
         height:"2 m",
-        Weight:"100 kg",
+        weight:"100 kg",
         category:"Seed",
         ability:"Overgrow"
     }    
 ];
 
-let element
+let element;
 
 //rotas
 app.get('/', (req, res) => {
@@ -62,12 +61,6 @@ app.get('/', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register.ejs');
 });
-
-// app.post('/register/add', (req, res) => {
-//     const data = req.body;
-//     pokedex.push(data);
-//     res.redirect('/');
-// });
 
 app.post('/register', (req, res) => {
     const value = pokedex[pokedex.length-1].id + 1
@@ -82,10 +75,10 @@ app.get('/details', (req, res) => {
     });
 });
 
-app.get('/details/:number', (req, res) => {
+app.get('/details/:id', (req, res) => {
     let pokemon=[];
     pokedex.filter((element)=>{
-        if(element.number==req.params.number){
+        if(element.id==req.params.id){
             pokemon[0]=element
         }
     });
