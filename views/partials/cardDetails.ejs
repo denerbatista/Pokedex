@@ -1,0 +1,13 @@
+<%element.forEach((element)=>{ %>
+  <a href="/details/<%=element.number%>">
+    <div class="card">
+      <h2 class="name"><%=element.name%></h2>
+      <img
+        class="img"
+        src="<%=element.img%>"
+        alt="picture Pokemon <%=element.name%>"
+      />
+      <h3 class="type">Type: <%=element.type%></h3>
+    </div>
+  </a>
+<% }); %> 

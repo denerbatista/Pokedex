@@ -4,8 +4,7 @@
   "description": "Projeto MVC de uma Pokédex",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js -e js,html,css,ejs"
   },
   "type": "module",
   "repository": {
@@ -20,7 +19,9 @@
   "homepage": "https://github.com/denerbatista/Pokedex#readme",
   "dependencies": {
     "ejs": "^3.0.2",
-    "express": "^4.17.3",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }

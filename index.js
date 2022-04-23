@@ -5,10 +5,14 @@ const __dirname=path.resolve(path.dirname(''));
 const port=3000;
 
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.join(__dirname,"public")));
+// app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true})) // O corpo (body) da requisição
+app.use(express.json()) // converter para JSON
 
 const pokedex =[
     {
+        id:1,
         number:1,
         name: "Bulbasaur",
         type:"Grass",
@@ -21,6 +25,7 @@ const pokedex =[
 
     },
     {
+        id:2,
         number:2,
         name: "Ivysaur",
         type:"Grass",
@@ -32,6 +37,7 @@ const pokedex =[
         ability:"Overgrow"
     },
     {
+        id:3,
         number:3,
         name: "Venusaur",
         type:"Grass",
@@ -42,11 +48,52 @@ const pokedex =[
         category:"Seed",
         ability:"Overgrow"
     }    
-]
+];
+
+let element
 
 //rotas
 app.get('/', (req, res) => {
-  res.render('index',{pokedex});
+    res.render('index.ejs',{
+      pokedex
+    });
+});
+
+app.get('/register', (req, res) => {
+    res.render('register.ejs');
+});
+
+// app.post('/register/add', (req, res) => {
+//     const data = req.body;
+//     pokedex.push(data);
+//     res.redirect('/');
+// });
+
+app.post('/register', (req, res) => {
+    const value = pokedex[pokedex.length-1].id + 1
+    const { number, name, type, img, description, height, Weight, category, ability  } = req.body
+    pokedex.push({id: value, number, name, type, img, description, height, Weight, category, ability})
+    res.redirect('/')
+});
+
+app.get('/details', (req, res) => {
+    res.render('details.ejs',{
+      pokedex,element
+    });
+});
+
+app.get('/details/:number', (req, res) => {
+    let pokemon=[];
+    pokedex.filter((element)=>{
+        if(element.number==req.params.number){
+            pokemon[0]=element
+        }
+    });
+    res.render('details.ejs',{
+        pokemon
+    });
 });
 
 app.listen(port, ()=>console.log(`Server function in http://localhost:${port} `));
+
+        

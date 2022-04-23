@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Pokédex</title>
   </head>
   <body>
-    <header>
-      <h1>Pokédex</h1>
-    </header>
+  <%- include('./partials/header.ejs')  %> 
     <main>
-      <section>
-        <% pokedex.forEach((pokemon)=>{ %>
-        <div class="card">
-          <h2 class="name"><%=pokemon.name%></h2>
-          <img class="img" src="<%=pokemon.img%>" alt="" />
-          <h3 class="type">Type: <%=pokemon.type%></h3>
-        </div>
+      <section id="one">
+        <% pokedex.forEach((element)=>{ %>
+          <a href="/details/<%=element.id%>">
+            <div class="card">
+              <h2 class="name"><%=element.name%></h2>
+              <img class="img" src="<%=element.img%>" alt="picture Pokemon <%=element.name%>" />
+              <h3 class="type">Type: <%=element.type%></h3>
+            </div>
+          </a>
         <% }); %>
       </section>
     </main>
-    <footer><h3>Projeto Desenvolvido por Dener Batista</h3></footer>
+   <%- include('./partials/footer.ejs')  %>
   </body>
 </html>

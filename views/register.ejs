@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Pokédex</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs')  %> 
+    <section id="register">
+        <h2>Register a new Pokemon:</h2>
+        <form action="/register" method="post">
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type">
+            <label for="img">Link for picture:</label>
+            <input type="url" id="img" name="img">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+            <label for="height">Height</label>
+            <input type="text" id="height" name="height">
+            <label for="weight">Weight:</label>
+            <input type="text" id="weight" name="weight">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category">
+            <label for="ability">Ability:</label>
+            <input type="text" id="ability" name="ability">
+            <button id="buttonAdd" type="submit">Send</button>
+        </form>
+    </section>
+    <%- include('./partials/footer.ejs')  %>
+</body>
+</html>
