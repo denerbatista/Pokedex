@@ -122,7 +122,6 @@ app.get('/remove/:id', (req, res) => {
             for(let i in pokedex){
                 pokedex[i].id=Number(i)+1
             }
-            console.log(pokedex)
             message = `Pokémon successfully removed !`;
         }
     });

@@ -1,68 +1,65 @@
 <%element.forEach((element)=>{ %>
-      <div id="cardDetails">
-
-      <div id="partOne">
-        <div class="one">
-          <div class="guiaOut" id="numberCard">
-            <div class="guiaInS">Number</div>
-            <div class="guiaInI">#00<%=element.number%></div>
-          </div>
-        </div>
-        <div class="one">
-          <div class="guiaOut" id="picture">
-            <img
-            id="pictureDetails"
-              src="<%=element.img%>"
-              alt="picture Pokemon <%=element.name%>"
-            />
-            <div id="edit">
-              <button><a href="/edit/<%=element.id%>">Edit Pokémon</a></button>
-            <button><a href="/remove/<%=element.id%>">Remove Pokémon</a></button>
-            </div>
-          </div>
-        </div>
+<div id="cardDetails">
+  <div id="partOne">
+    <div class="one">
+      <div class="guiaOut" id="numberCard">
+        <div class="guiaInS">Number</div>
+        <div class="guiaInI">#00<%=element.number%></div>
       </div>
-
-      <div id="partTwo">
-        <div class="one">
-          <div class="guiaOut">
-            <div class="guiaInS">Name</div>
-            <div class="guiaInI"><%=element.name%></div>
-          </div>
-        </div>
-        <div class="guiaOut2">
-          <div class="two">
-            <div class="guiaInS2">Type</div>
-            <div class="guiaInI2"><%=element.type%></div>
-          </div>
-          <div class="two">
-            <div class="guiaInS2">Category</div>
-            <div class="guiaInI2"><%=element.category%></div>
-          </div>
-        </div>
-        <div class="one">
-          <div class="guiaOut">
-            <div class="guiaInS">Ability</div>
-            <div class="guiaInI"><%=element.ability%></div>
-          </div>
-        </div>
-        <div class="guiaOut2">
-          <div class="two">
-            <div class="guiaInS2">Height</div>
-            <div class="guiaInI2"><%=element.height%></div>
-          </div>
-          <div class="two">
-            <div class="guiaInS2">Weight</div>
-            <div class="guiaInI2"><%=element.weight%></div>
-          </div>
-        </div>
-        <div class="one">
-          <div class="guiaOut">
-            <div class="guiaInS">Description</div>
-            <div class="guiaInI"><%=element.description%></div>
-          </div>
-        </div>
-      </div>
-
     </div>
+    <div class="one">
+      <div class="guiaOut" id="picture">
+        <img
+          id="pictureDetails"
+          src="<%=element.img%>"
+          alt="picture Pokemon <%=element.name%>"
+        />
+        <div id="edit">
+          <button><a href="/edit/<%=element.id%>">Edit Pokémon</a></button>
+          <button><a href="/remove/<%=element.id%>">Remove Pokémon</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="partTwo">
+    <div class="one">
+      <div class="guiaOut">
+        <div class="guiaInS">Name</div>
+        <div class="guiaInI"><%=element.name%></div>
+      </div>
+    </div>
+    <div class="guiaOut2">
+      <div class="two">
+        <div class="guiaInS2">Type</div>
+        <div class="guiaInI2"><%=element.type%></div>
+      </div>
+      <div class="two">
+        <div class="guiaInS2">Category</div>
+        <div class="guiaInI2"><%=element.category%></div>
+      </div>
+    </div>
+    <div class="one">
+      <div class="guiaOut">
+        <div class="guiaInS">Ability</div>
+        <div class="guiaInI"><%=element.ability%></div>
+      </div>
+    </div>
+    <div class="guiaOut2">
+      <div class="two">
+        <div class="guiaInS2">Height</div>
+        <div class="guiaInI2"><%=element.height%></div>
+      </div>
+      <div class="two">
+        <div class="guiaInS2">Weight</div>
+        <div class="guiaInI2"><%=element.weight%></div>
+      </div>
+    </div>
+    <div class="one">
+      <div class="guiaOut">
+        <div class="guiaInS">Description</div>
+        <div class="guiaInI"><%=element.description%></div>
+      </div>
+    </div>
+  </div>
+</div>
 <% }); %>
