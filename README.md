@@ -34,7 +34,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 A Pokédex é conhecida como Poké-Agenda no Brasil (e ainda como Dexter ou Dextette, dependendo da voz masculina ou feminina do aparelho).
-Trata-se de uma enciclopédia virtual portátil de alta tecnologia que os treinadores Pokémon transportam para registra todas as espécies diferentes de Pokémon que são encontradas durante a sua viagem como treinadores. 
+Trata-se de uma enciclopédia virtual portátil de alta tecnologia que os treinadores Pokémon transportam para registra todas as espécies diferentes de Pokémon que são encontradas durante a sua viagem como treinadores.
+Projeto desenvolvido como meio de avaliação do curso de desenvolvedor full stack da @blueEdtech.  
 
 ## :information_source: Como utilizar
 
@@ -44,11 +45,14 @@ Na linha de comando:
 ```bash
 # Clonar o repositório
 $ git clone https://github.com/denerbatista/Pokedex.git
+
 # Entrar no diretório
 $ cd Pokedex
+
 # Baixar as dependências
 $ npm install
 $ npm install nodemon
+
 # Executar o servidor
 $ npm run dev
 ```
@@ -56,6 +60,6 @@ Feito isso, abra o seu navegador e acesse http://localhost:3000/
 
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/denerbatista/Pokedex/blob/main/LICENSE) para mais detalhes.
 
 Feito com ❤️ por Dener Batista 👋🏽 [Entre em contato!](https://www.linkedin.com/in/dener-gomes-batista-83894168/)
