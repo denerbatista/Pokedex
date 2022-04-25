@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 const app = express();
 const __dirname=path.resolve(path.dirname(''));
-const port=3000;
+const port=process.env.PORT || 3000;
 let message = "";
 
 app.set("view engine", "ejs");

@@ -4,7 +4,8 @@
   "description": "Projeto MVC de uma Pokédex",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js -e js,html,css,ejs"
+    "dev": "nodemon index.js -e js,html,css,ejs",
+    "start": "index.js -e js,html,css,ejs"
   },
   "type": "module",
   "repository": {
