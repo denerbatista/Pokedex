@@ -48,10 +48,19 @@ ul#menu{
 
 ul#menu li{
     padding: 0.8rem;
+    transition: all 0.3s ease-in-out;
+}
+#menu li:hover{
+    transform: scale(1.1);
 }
 
 li a{
     color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+li a:hover{
+    color:  maroon;
 }
 
 /* style mensage confirmation */
@@ -76,7 +85,7 @@ section#message {
   span#close {
     font-size: 2rem;
     cursor: pointer;
-    transition: .3s;
+    transition: .3s ease-in-out;
   }
   
   span#close:hover{
@@ -200,6 +209,7 @@ section#register {
   section#register form button:hover {
     background-color: brown;
     color: #fff;
+    transform: scale(1.1);
   }
 
 /* section#register{
@@ -227,6 +237,35 @@ section#register form button{
     padding: 1rem;
 
 } */
+#edit{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+#edit a{
+    padding: 0.6rem;
+    min-width: 5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: black;
+    background-color: #fff;
+    border: solid 1px rgb(109, 109, 109);
+    border-radius: 1rem;
+    /* color: rgb(109, 109, 109); */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;    
+}
+
+#edit a:hover{
+    background-color: brown;
+    color: #fff;
+    transform: scale(1.1);
+}
 
 footer{
     /* position: fixed; */
@@ -243,10 +282,16 @@ footer{
 footer h3{
     display: flex;
     /* margin: 2rem; */
-    color: white;
     text-align: center;
 }
 
+footer a{
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+footer a:hover{
+    transform: scale(1.1);
+}
 /* style cardDetails  */
 
 #cardDetails{

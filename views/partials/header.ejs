@@ -1,3 +1,8 @@
+<% if(message != "") {  %>
+  <section id="message">
+      <p><%= message %></p> <span id="close">&times;</span>
+  </section>
+<% } %>
 <header>
   <img src="https://pokedex.sleduardo.dev/img/logo.svg" alt="Logo Pokédex" />
 </header>
@@ -9,8 +14,3 @@
     <!-- <li><a href="">Contact</a></li> -->
   </ul>
 </nav>
-<% if(message != "") {  %>
-  <section id="message">
-      <p><%= message %></p> <span id="close">&times;</span>
-  </section>
-<% } %>

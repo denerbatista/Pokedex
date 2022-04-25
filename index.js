@@ -7,8 +7,8 @@ let message = "";
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
-app.use(express.urlencoded({extended: true})) // O corpo (body) da requisição
-app.use(express.json()) // converter para JSON
+app.use(express.urlencoded({extended: true})); // O corpo (body) da requisição
+app.use(express.json()); // converter para JSON
 
 const pokedex =[
     {
