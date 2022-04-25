@@ -13,7 +13,7 @@
     "url": "git+https://github.com/denerbatista/Pokedex.git"
   },
   "author": "Dener Batista",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/denerbatista/Pokedex/issues"
   },
