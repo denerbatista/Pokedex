@@ -12,26 +12,26 @@
 <body>
     <%- include('./partials/header.ejs')  %> 
     <section id="register">
-        <h2>Register a new Pokemon:</h2>
-        <form action="/register" method="post">
+        <h2>Edit Pokemon <%=pokemonEdit[0].name%>:</h2>
+        <form action="/edit/:id" method="post">
             <label for="number">Number:</label>
-            <input type="number" id="number" name="number" placeholder="Enter pokemon number" required>
+            <input type="number" id="number" name="number" value="<%=pokemonEdit[0].number%>" required>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name"placeholder="Enter pokemon name" required>
+            <input type="text" id="name" name="name"value="<%=pokemonEdit[0].name%>" required>
             <label for="type">Type:</label>
-            <input type="text" id="type" name="type" placeholder="Enter pokemon type" required>
+            <input type="text" id="type" name="type" value="<%=pokemonEdit[0].type%>" required>
             <label for="img">Link for picture:</label>
-            <input type="url" id="img" name="img" placeholder="Enter url pokemon picture" required>
+            <input type="url" id="img" name="img" value="<%=pokemonEdit[0].img%>" required>
             <label for="description">Description:</label>
-            <input type="text" id="description" name="description" placeholder="Enter pokemon description" required>
+            <input type="text" id="description" name="description" value="<%=pokemonEdit[0].description%>" required>
             <label for="height">Height</label>
-            <input type="text" id="height" name="height" placeholder="Enter pokemon height" required>
+            <input type="text" id="height" name="height" value="<%=pokemonEdit[0].height%>" required>
             <label for="weight">Weight:</label>
-            <input type="text" id="weight" name="weight" placeholder="Enter pokemon weight" required>
+            <input type="text" id="weight" name="weight" value="<%=pokemonEdit[0].weight%>" required>
             <label for="category">Category:</label>
-            <input type="text" id="category" name="category" placeholder="Enter pokemon category" required>
+            <input type="text" id="category" name="category" value="<%=pokemonEdit[0].category%>" required>
             <label for="ability">Ability:</label>
-            <input type="text" id="ability" name="ability" placeholder="Enter pokemon ability" required>
+            <input type="text" id="ability" name="ability" value="<%=pokemonEdit[0].ability%>" required>
             <button id="buttonAdd" type="submit">Send</button>
         </form>
     </section>

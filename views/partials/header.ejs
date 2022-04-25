@@ -9,3 +9,8 @@
     <li><a href="">Contact</a></li>
   </ul>
 </nav>
+<% if(message != "") {  %>
+  <section id="message">
+      <p><%= message %></p> <span id="close">&times;</span>
+  </section>
+<% } %>

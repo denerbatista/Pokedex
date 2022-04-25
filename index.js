@@ -3,6 +3,7 @@ import path from 'path';
 const app = express();
 const __dirname=path.resolve(path.dirname(''));
 const port=3000;
+let message = "";
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
@@ -48,30 +49,37 @@ const pokedex =[
         ability:"Overgrow"
     }    
 ];
-
 let element;
+let pokemonEdit;
 
 //rotas
 app.get('/', (req, res) => {
+    setTimeout(() => {
+        message = "";
+      }, 1000);
+
     res.render('index.ejs',{
-      pokedex
+      pokedex, message
     });
 });
 
 app.get('/register', (req, res) => {
-    res.render('register.ejs');
+    res.render('register.ejs', {
+        message
+    });
 });
 
 app.post('/register', (req, res) => {
     const value = pokedex[pokedex.length-1].id + 1
-    const { number, name, type, img, description, height, Weight, category, ability  } = req.body
-    pokedex.push({id: value, number, name, type, img, description, height, Weight, category, ability})
-    res.redirect('/')
+    const { number, name, type, img, description, height, weight, category, ability  } = req.body;
+    pokedex.push({id: value, number, name, type, img, description, height, weight, category, ability});
+    message = `Pokémon successfully registered !`;
+    res.redirect("/");
 });
 
 app.get('/details', (req, res) => {
     res.render('details.ejs',{
-      pokedex,element
+      pokedex,element,message
     });
 });
 
@@ -83,10 +91,42 @@ app.get('/details/:id', (req, res) => {
         }
     });
     res.render('details.ejs',{
-        pokemon
+        pokemon,message
     });
 });
 
-app.listen(port, ()=>console.log(`Server function in http://localhost:${port} `));
+app.get('/edit/:id', (req, res) => {
+    pokemonEdit=[];
+    pokedex.filter((element)=>{
+        if(element.id==req.params.id){
+            pokemonEdit[0]=element
+        }
+    });
+    res.render('editPokemon.ejs',{
+        pokemonEdit,message
+    });
+});
 
-        
+app.post('/edit/:id', (req, res) => {
+    const value = pokedex[pokemonEdit[0].id-1].id
+    const { number, name, type, img, description, height, weight, category, ability  } = req.body;
+    pokedex[pokemonEdit[0].id-1]={id: value, number, name, type, img, description, height, weight, category, ability};
+    message = `Pokémon successfully edited !`;
+    res.redirect("/");
+});
+
+app.get('/remove/:id', (req, res) => {
+    pokedex.filter((element)=>{
+        if(element.id==req.params.id){
+            pokedex.splice(req.params.id-1,1);
+            for(let i in pokedex){
+                pokedex[i].id=Number(i)+1
+            }
+            console.log(pokedex)
+            message = `Pokémon successfully removed !`;
+        }
+    });
+    res.redirect("/");
+});
+
+app.listen(port, ()=>console.log(`Server function in http://localhost:${port} `));        
