@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js -e js,html,css,ejs",
-    "start": "index.js -e js,html,css,ejs"
+    "start": "node index.js"
   },
   "type": "module",
   "repository": {
