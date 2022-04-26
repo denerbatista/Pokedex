@@ -1,3 +1,4 @@
+import dotEnv from 'dotenv'
 import express from 'express';
 import path from 'path';
 const app = express();
@@ -5,6 +6,7 @@ const __dirname=path.resolve(path.dirname(''));
 const PORT=process.env.PORT || 3005;
 let message = "";
 
+dotEnv.config();
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded({extended: true})); // O corpo (body) da requisição
