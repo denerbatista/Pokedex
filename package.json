@@ -7,7 +7,11 @@
     "dev": "nodemon index.js -e js,html,css,ejs",
     "start": "node index.js"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "type": "module",
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/denerbatista/Pokedex.git"

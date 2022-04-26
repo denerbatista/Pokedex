@@ -3,7 +3,7 @@ import path from 'path';
 import dotenv from 'dotenv'
 const app = express();
 const __dirname=path.resolve(path.dirname(''));
-const port=process.env.PORT || 3005;
+const PORT=process.env.PORT || 3005;
 let message = "";
 
 dotenv.config()
@@ -131,4 +131,4 @@ app.get('/remove/:id', (req, res) => {
     res.redirect("/");
 });
 
-app.listen(port, ()=>console.log(`Server function in http://localhost:${port} `));        
+app.listen(PORT, ()=>console.log(`Server function in http://localhost:${PORT} `));        
