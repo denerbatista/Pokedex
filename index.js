@@ -3,7 +3,7 @@ import path from 'path';
 import dotenv from 'dotenv'
 const app = express();
 const __dirname=path.resolve(path.dirname(''));
-const port=process.env.PORT || 3005;
+const port="pokedex-blue-ppat1e3wj-denerbatista.vercel.app" || 3005;
 let message = "";
 
 dotenv.config()
