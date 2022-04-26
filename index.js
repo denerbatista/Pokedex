@@ -1,12 +1,9 @@
 import express from 'express';
 import path from 'path';
-import dotenv from 'dotenv'
 const app = express();
 const __dirname=path.resolve(path.dirname(''));
 const PORT=process.env.PORT || 3005;
 let message = "";
-
-dotenv.config()
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
