@@ -19,9 +19,12 @@
   },
   "homepage": "https://github.com/denerbatista/Pokedex#readme",
   "dependencies": {
+    "-": "^0.0.1",
     "dotenv": "^16.0.0",
     "ejs": "^3.0.2",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "g": "^2.0.1",
+    "vercel": "^24.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
