@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-como-utilizar">Como utilizar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  
+  <a href="#information_source-como-utilizar">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -37,26 +37,9 @@ A Pokédex é conhecida como Poké-Agenda no Brasil (e ainda como Dexter ou Dext
 Trata-se de uma enciclopédia virtual portátil de alta tecnologia que os treinadores Pokémon transportam para registra todas as espécies diferentes de Pokémon que são encontradas durante a sua viagem como treinadores.
 Projeto desenvolvido como meio de avaliação do curso de desenvolvedor full stack da @blueEdtech.  
 
-## :information_source: Como utilizar
-
-Para clonar e executar este aplicativo, você precisará do [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) v16.14.0 ou superior + Npm instalado em seu computador.
-
-Na linha de comando:
-```bash
-# Clonar o repositório
-$ git clone https://github.com/denerbatista/Pokedex.git
-
-# Entrar no diretório
-$ cd Pokedex
-
-# Baixar as dependências
-$ npm install
-$ npm install nodemon
-
-# Executar o servidor
-$ npm run dev
-```
-Feito isso, abra o seu navegador e acesse http://localhost:3000/
+## 🔖:information_source: Layout
+ 
+Você pode visualizar o layout do projeto através desse link: https://pokedex-blue-mvc.onrender.com/
 
 ## :memo: Licença
 
