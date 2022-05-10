@@ -16,7 +16,7 @@
 <br>
 
 <p align="center">
-  <img alt="dev.pokédex" src="https://cdn.discordapp.com/attachments/947324026236330018/968108072843218954/unknown.png" width="100%">
+  <img alt="dev.pokédex" src="https://cdn.discordapp.com/attachments/947324026236330018/973392030417952798/jobscalc-removebg-preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
